@@ -8,21 +8,21 @@ const noteSchema = mongoose.Schema(
       ref: 'User',
     },
     ticket: {
-        type: mongoose.Schema.Types.ObjectId,
-        required: true,
-        ref: 'Ticket',
-      },
+      type: mongoose.Schema.Types.ObjectId,
+      required: true,
+      ref: 'Ticket',
+    },
     text: {
       type: String,
       required: [true, 'Please add some text'],
     },
     isStaff: {
-        type: Boolean,
-        default: false
-      },
+      type: Boolean,
+      default: false,
+    },
     staffId: {
-        type: String
-      },
+      type: String,
+    },
   },
   {
     timestamps: true,
